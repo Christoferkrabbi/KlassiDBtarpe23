@@ -4,6 +4,7 @@ using KlassiDBtarpe23.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace KlassiDBtarpe23.Data.Migrations
 {
     [DbContext(typeof(KlassiDBtarpe23DbContext))]
-    partial class KlassiDBtarpe23DbContextModelSnapshot : ModelSnapshot
+    [Migration("20241025092139_Deez")]
+    partial class Deez
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -24,11 +27,9 @@ namespace KlassiDBtarpe23.Data.Migrations
 
             modelBuilder.Entity("KlassiDBtarpe23.Core.Domain.Class", b =>
                 {
-                    b.Property<int>("ClassID")
+                    b.Property<Guid>("ClassID")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ClassID"));
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("ClassName")
                         .IsRequired()
@@ -41,14 +42,12 @@ namespace KlassiDBtarpe23.Data.Migrations
 
             modelBuilder.Entity("KlassiDBtarpe23.Core.Domain.Coupon", b =>
                 {
-                    b.Property<int>("CouponID")
+                    b.Property<Guid>("CouponID")
                         .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<int?>("Date")
                         .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CouponID"));
-
-                    b.Property<DateOnly?>("Date")
-                        .HasColumnType("date");
 
                     b.Property<string>("StudentName")
                         .IsRequired()
@@ -61,11 +60,9 @@ namespace KlassiDBtarpe23.Data.Migrations
 
             modelBuilder.Entity("KlassiDBtarpe23.Core.Domain.Instructor", b =>
                 {
-                    b.Property<int>("InstructorID")
+                    b.Property<Guid>("InstructorID")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("InstructorID"));
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<int>("ClassAssignments")
                         .HasColumnType("int");
@@ -88,11 +85,9 @@ namespace KlassiDBtarpe23.Data.Migrations
 
             modelBuilder.Entity("KlassiDBtarpe23.Core.Domain.Student", b =>
                 {
-                    b.Property<int>("StudentID")
+                    b.Property<Guid>("StudentID")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("StudentID"));
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<int>("Age")
                         .HasColumnType("int");

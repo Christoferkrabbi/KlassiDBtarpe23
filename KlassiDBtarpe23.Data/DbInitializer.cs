@@ -114,16 +114,16 @@ namespace KlassiDBtarpe23.Data
             //objekti õpilastega, mis lisatakse siis, kui õpilasi sisestatud ei ole
             var coupons = new Coupon[]
             {
-                new Coupon { StudentName="Pablo" },
-                new Coupon { StudentName="Pablo-Juunior" },
-                new Coupon { StudentName="James" },
-                new Coupon { StudentName="Joosep" },
-                new Coupon { StudentName="Mardo" },
-                new Coupon { StudentName="Mario" },
-                new Coupon { StudentName="Juss" },
-                new Coupon { StudentName="Peeter-paan" },
-                new Coupon { StudentName="Jaanus" },
-                new Coupon { StudentName="Billy" }
+                new Coupon { StudentName="Pablo" , Date = new DateOnly(2024, 10, 25) },
+                new Coupon { StudentName="Pablo-Juunior", Date = new DateOnly(2024, 10, 25) },
+                new Coupon { StudentName="James", Date = new DateOnly(2024, 10, 25) },
+                new Coupon { StudentName="Joosep", Date = new DateOnly(2024, 10, 25) },
+                new Coupon { StudentName="Mardo", Date = new DateOnly(2024, 10, 25)  },
+                new Coupon { StudentName="Mario", Date = new DateOnly(2024, 10, 25) },
+                new Coupon { StudentName="Juss", Date = new DateOnly(2024, 10, 25) },
+                new Coupon { StudentName="Peeter-paan", Date = new DateOnly(2024, 10, 25) },
+                new Coupon { StudentName="Jaanus", Date = new DateOnly(2024, 10, 25) },
+                new Coupon { StudentName="Billy", Date = new DateOnly(2024, 10, 25) }
 
 
             };

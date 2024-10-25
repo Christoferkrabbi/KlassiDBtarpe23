@@ -10,7 +10,7 @@ namespace KlassiDBtarpe23.Core.Domain
     public class Instructor
     {
         [Key]
-        public Guid InstructorID { get; set; }
+        public int InstructorID { get; set; }
 
         public string ClassName { get; set; }
         public string InstructorName { get; set; }

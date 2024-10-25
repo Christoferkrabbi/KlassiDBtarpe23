@@ -10,9 +10,9 @@ namespace KlassiDBtarpe23.Core.Domain
     public class Coupon
     {
         [Key]
-        public Guid CouponID { get; set; }
+        public int CouponID { get; set; }
         public string StudentName { get; set; }
-        public int? Date { get; set; }
+        public DateOnly? Date { get; set; }
        
     }
 }

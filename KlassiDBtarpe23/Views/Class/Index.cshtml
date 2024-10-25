@@ -1,0 +1,26 @@
+﻿﻿
+@model IEnumerable<KlassiDBtarpe23.Core.Domain.Class>
+@{
+    ViewData["Title"] = "Klassid";
+}
+
+<h2>Klassid</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.ClassID)</th>
+            <th>@Html.DisplayNameFor(model => model.ClassName)</th>                    
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var Class in Model)
+        {
+
+            <tr>
+                <td>@Html.DisplayFor(modelItem => Class.ClassID)</td>
+                <td>@Html.DisplayFor(modelItem => Class.ClassName)</td>             
+            </tr>
+        }     
+    </tbody>
+</table>

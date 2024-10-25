@@ -1,0 +1,28 @@
+﻿﻿
+@model IEnumerable<KlassiDBtarpe23.Core.Domain.Coupon>
+@{
+    ViewData["Title"] = "Kupongid";
+}
+
+<h2>Kupongid</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.CouponID)</th>
+            <th>@Html.DisplayNameFor(model => model.StudentName)</th>
+            <th>@Html.DisplayNameFor(model => model.Date)</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var coupon in Model)
+        {
+
+            <tr>
+                <td>@Html.DisplayFor(modelItem => coupon.CouponID)</td>
+                <td>@Html.DisplayFor(modelItem => coupon.StudentName)</td>
+                <td>@Html.DisplayFor(modelItem => coupon.Date)</td>
+            </tr>
+        }
+    </tbody>
+</table>

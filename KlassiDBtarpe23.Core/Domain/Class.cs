@@ -10,7 +10,7 @@ namespace KlassiDBtarpe23.Core.Domain
     public class Class
     {
         [Key]
-        public Guid ClassID { get; set; }  // Auto-incremented ID for database use
+        public int ClassID { get; set; }  // Auto-incremented ID for database use
         public string ClassName { get; set; }  // e.g., "1a", "1b", "2a"
         
         

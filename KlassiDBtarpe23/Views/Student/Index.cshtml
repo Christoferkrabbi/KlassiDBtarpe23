@@ -1,0 +1,30 @@
+﻿﻿
+@model IEnumerable<KlassiDBtarpe23.Core.Domain.Student>
+@{
+    ViewData["Title"] = "Õpilased";
+}
+
+<h2>Õpilased</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.StudentID)</th>
+            <th>@Html.DisplayNameFor(model => model.StudentName)</th>
+            <th>@Html.DisplayNameFor(model => model.ClassName)</th>         
+            <th>@Html.DisplayNameFor(model => model.Age)</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var student in Model)
+        {
+
+            <tr>
+                <td>@Html.DisplayFor(modelItem => student.StudentID)</td>
+                <td>@Html.DisplayFor(modelItem => student.StudentName)</td>
+                <td>@Html.DisplayFor(modelItem => student.ClassName)</td>
+                <td>@Html.DisplayFor(modelItem => student.Age)</td>
+            </tr>
+        }
+    </tbody>
+</table>

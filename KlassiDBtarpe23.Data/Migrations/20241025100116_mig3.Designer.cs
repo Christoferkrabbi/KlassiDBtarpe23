@@ -4,6 +4,7 @@ using KlassiDBtarpe23.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace KlassiDBtarpe23.Data.Migrations
 {
     [DbContext(typeof(KlassiDBtarpe23DbContext))]
-    partial class KlassiDBtarpe23DbContextModelSnapshot : ModelSnapshot
+    [Migration("20241025100116_mig3")]
+    partial class mig3
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -47,8 +50,8 @@ namespace KlassiDBtarpe23.Data.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CouponID"));
 
-                    b.Property<DateOnly?>("Date")
-                        .HasColumnType("date");
+                    b.Property<DateTime?>("Date")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("StudentName")
                         .IsRequired()
